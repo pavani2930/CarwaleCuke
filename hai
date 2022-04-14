@@ -1,0 +1,9 @@
+public void m_city(String city) {
+		Select selectcity=new Select(carvaluationlocators.selectCityDropdown);
+		selectcity.selectByVisibleText(city);
+	}
+	public void m_owners(String owner) {
+		Select selectowners=new Select(carvaluationlocators.selectOwnersDropdown);
+		selectowners.selectByVisibleText(owner);
+	}
+	
