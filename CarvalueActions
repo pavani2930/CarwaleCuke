@@ -1,0 +1,66 @@
+public class CarValuationActions {
+	
+	
+	CarValuationlocators carvaluationlocators;
+	
+	public CarValuationActions() {
+		
+		this.carvaluationlocators=new CarValuationlocators();
+		PageFactory.initElements(SeleniumDriver.getDriver(), carvaluationlocators);
+	}
+
+	
+	public void m_year(String year) {
+		
+		Select selectyear=new Select(carvaluationlocators.selectYearDropdown);
+		selectyear.selectByVisibleText(year);
+	}
+	
+	
+	public void m_month(String month) {
+		Select selectmonth=new Select(carvaluationlocators.selectMonthDropdown1);
+		selectmonth.selectByVisibleText(month);
+		
+	}
+	
+	
+	public void m_make(String make) {
+		Select selectmake=new Select(carvaluationlocators.selectMakeDropdown);
+		selectmake.selectByVisibleText(make);
+	}
+	
+	
+	
+	public void m_model(String model) {
+		
+		Select selectmodel=new Select(carvaluationlocators.selectModelDropdown);
+		selectmodel.selectByVisibleText(model);
+		
+	}
+	
+	public void m_version(String version) {
+		
+		Select selectversion=new Select(carvaluationlocators.selectVersionDropdown);
+		selectversion.selectByVisibleText(version);
+	}
+	
+	public void m_city(String city) {
+		Select selectcity=new Select(carvaluationlocators.selectCityDropdown);
+		selectcity.selectByVisibleText(city);
+	}
+	public void m_owners(String owner) {
+		Select selectowners=new Select(carvaluationlocators.selectOwnersDropdown);
+		selectowners.selectByVisibleText(owner);
+	}
+	
+	public  void m_kilometers() {
+		carvaluationlocators.Kilometers.click();
+		carvaluationlocators.Kilometers.sendKeys("1000");
+	}
+	
+	public void m_submit() {
+		
+		carvaluationlocators.checkbutton.click();
+		
+	}
+}
